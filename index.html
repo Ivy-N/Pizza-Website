@@ -5,58 +5,58 @@
     <link href=css/styles.css rel=stylesheet type=text/css>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src=js/scripts.js></script>
-    <title>Pika Pizza</title>
+    <title>Omayi Pizza</title>
   </head>
 
   <body>
      <div class="container">
        <h1>omayi pizzas</h1>
 
-       <div class="row">
 
-         <div class="col-md-6">
            <h2>Pick a pizza:</h2>
+           <div class="row">
 
-           <div class=row>
-             <div id=menuhidden>
-               <p><span class=clickable>Click here</span> to view the prices for our delicious pizzas</p>
+             <div class=imageplusmenuplusdeliveryquestion>
+             <div class="col-md-5">
+               <img src=images/pizza.jpg alt="This is a pizza">
+
+                 <div id=menuhidden>
+                   <p><span class=clickable>Click here</span> to view the prices for our delicious pizzas</p>
+                 </div>
+
+                 <div id=menushowing>
+                  <p>Have a look at our delicious menu. <span class=clickable>Click here</span> to hide it again</p>
+                   <ul>
+                     <li>Small Pizza: 800</li>
+                     <li>Medium Pizza: 900</li>
+                     <li>Large Pizza: 1000</li>
+                     <li>Crispy Crust: +50</li>
+                     <li>Stuffed Crust: +100</li>
+                     <li>Gluten-free Crust: +150</li>
+                     <li>Mushroom Toppings: +50</li>
+                     <li>Bacon Toppings: +100</li>
+                     <li>Tomato Toppings: +150</li>
+                   </ul>
+                 </div>
+
+                 <div class= deliveryQuestion>
+                   <p>Would you like your pizza delivered?</p>
+
+                   <button class="btn btn-primary" id="yes">YES</button>
+                   <button class="btn btn-inverse" id="no">NO</button>
+                 </div>
+               </div>
              </div>
 
-             <div id=menushowing>
-              <p>Have a look at our delicious menu. <span class=clickable>Click here</span> to hide it again</p>
-               <ul>
-                 <li>Small Pizza: 800</li>
-                 <li>Medium Pizza: 900</li>
-                 <li>Large Pizza: 1000</li>
-                 <li>Crispy Crust: +50</li>
-                 <li>Stuffed Crust: +100</li>
-                 <li>Gluten-free Crust: +150</li>
-                 <li>Mushroom Toppings: +50</li>
-                 <li>Bacon Toppings: +100</li>
-                 <li>Tomato Toppings: +150</li>
-               </ul>
-             </div>
-           </div>
 
-           <div class= deliveryQuestion>
-           <p>Would you like your pizza delivered</p>
-
-           <button class="btn btn-primary" id="yes">YES</button>
-           <button class="btn btn-inverse" id="no">NO</button>
-           </div>
-
-
-           <div class=row>
+           <div class=col-md-6>
            <form id="new-pikaPizza">
 
              <div class="form-group">
                <label for="new-name">Name</label>
                <input type="text" class="form-control" id="new-name">
              </div>
-             <div class="form-group">
-               <label for="new-delivery">Delivery? (yes, no)</label>
-               <input type="text" class="form-control" id="new-delivery">
-             </div>
+
              <div class="form-group">
                 <label for="new-address">Address (Street, City, State)</label>
                 <input type="text" class="form-control" id="new-address">
@@ -85,27 +85,30 @@
              <button type="submit" class="btn">Check out</button>
            </form>
            </div>
-
-           <h2>Delivery:</h2>
-           <ul id="deliveries">
-
-           </ul>
          </div>
 
-         <div class="col-md-6">
-           <div id="show-delivery">
-             <h2></h2>
-             <p>Delivery: <span class="deliveryResponse"></span></p>
-             <p>Address: <span class="addressResponse"></span></p>
-             <p>Pizzas:</p>
-             <ul id="pizzas">
+         <div class=row>
+           <div class=col-md-6>
+             <h2>Order Details:</h2>
+             <ul id="deliveries">
 
              </ul>
+           </div>
 
+           <div class="col-md-6">
+             <div id="show-delivery">
+               <h2></h2>
+               <p>Address: <span class="addressResponse"></span></p>
+               <p>Pizzas:</p>
+               <ul id="pizzas">
+
+               </ul>
+
+             </div>
            </div>
          </div>
 
+
        </div>
-     </div>
    </body>
   </html>

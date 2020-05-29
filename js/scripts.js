@@ -1,8 +1,7 @@
 
     //business logic
-    function Delivery(name, delivery, address) {
+    function Delivery(name, address) {
       this.name = name;
-      this.delivery = delivery;
       this.address = address;
       this.pizzas = [];
     }
@@ -14,16 +13,20 @@
     }
 
     Delivery.prototype.deliveryDetails = function() {
-      return this.name +"'s order'";
+      return this.name +"'s order";
     }
 
     Pizza.prototype.fullOrder = function() {
       return "Size: "+ this.size + ". Crust: " + this.crust + ". Toppings: " + this.toppings;
     }
 
+    var cost=function(size, crust, toppings){
+      return costOfSize+costOfCrust+costOfToppings
+    }
+
+  
     function resetFields() {
         $("input#new-name").val("");
-        $("input#new-delivery").val("");
         $("input#new-address").val("");
         $("input.new-size").val("");
         $("input.new-crust").val("");
@@ -73,9 +76,8 @@ $("button#yes").click(function() {
         event.preventDefault();
 
         var inputtedName = $("input#new-name").val();
-        var inputtedDelivery = $("input#new-delivery").val();
         var inputtedAddress = $("input#new-address").val();
-        var newDelivery = new Delivery(inputtedName, inputtedDelivery, inputtedAddress);
+        var newDelivery = new Delivery(inputtedName, inputtedAddress);
 
         $(".new-pizza").each(function() {
           var inputtedSize = $(this).find("input.new-size").val();
@@ -91,7 +93,6 @@ $("button#yes").click(function() {
           $("#show-delivery").show();
           $("#show-delivery h2").text(newDelivery.deliveryDetails());
           $(".nameResponse").text(newDelivery.name);
-          $(".deliveryResponse").text(newDelivery.delivery);
           $(".addressResponse").text(newDelivery.address);
           $("ul#pizzas").text("");
           newDelivery.pizzas.forEach(function(pizza) {
