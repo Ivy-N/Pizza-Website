@@ -1,6 +1,7 @@
 
     //business logic
-    function Delivery(delivery, address) {
+    function Delivery(name, delivery, address) {
+      this.name = name;
       this.delivery = delivery;
       this.address = address;
       this.pizzas = [];
@@ -13,14 +14,15 @@
     }
 
     Delivery.prototype.deliveryDetails = function() {
-      return "Delivery: " + this.delivery + ". TO: " + this.address;
+      return this.name +"'s order'";
     }
 
     Pizza.prototype.fullOrder = function() {
-      return this.size + ", " + this.crust + ", " + this.toppings;
+      return "Size: "+ this.size + ". Crust: " + this.crust + ". Toppings: " + this.toppings;
     }
 
     function resetFields() {
+        $("input#new-name").val("");
         $("input#new-delivery").val("");
         $("input#new-address").val("");
         $("input.new-size").val("");
@@ -51,9 +53,10 @@
       $("form#new-pikaPizza").submit(function(event) {
         event.preventDefault();
 
+        var inputtedName = $("input#new-name").val();
         var inputtedDelivery = $("input#new-delivery").val();
         var inputtedAddress = $("input#new-address").val();
-        var newDelivery = new Delivery(inputtedDelivery, inputtedAddress);
+        var newDelivery = new Delivery(inputtedName, inputtedDelivery, inputtedAddress);
 
         $(".new-pizza").each(function() {
           var inputtedSize = $(this).find("input.new-size").val();
@@ -68,6 +71,7 @@
         $(".delivery").last().click(function() {
           $("#show-delivery").show();
           $("#show-delivery h2").text(newDelivery.deliveryDetails());
+          $(".nameResponse").text(newDelivery.name);
           $(".deliveryResponse").text(newDelivery.delivery);
           $(".addressResponse").text(newDelivery.address);
           $("ul#pizzas").text("");
