@@ -31,6 +31,7 @@
     }
 
     // user interface logic
+
     //for viewing menu
     jQuery(document).ready(function(){
   $(".clickable").click(function(){
@@ -38,6 +39,15 @@
     $("#menuhidden").slideToggle();
   });
 });
+
+//alert button
+jQuery(document).ready(function(){
+$("button#yes").click(function() {
+    alert ("The delivery charge will be 200shillings");
+    prompt ("Please enter your address:");
+    alert("Your order will be delivered to your location");
+    });
+  });
 
 //for displaying choices selected
     $(document).ready(function() {
