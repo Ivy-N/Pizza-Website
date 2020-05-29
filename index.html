@@ -14,33 +14,38 @@
 
 
            <h2>Pick a pizza:</h2>
+
+           <div class=row>
+             <div id=menuhidden>
+               <h3><span class=clickable>Click here to view the prices</span> for our delicious pizzas</h3>
+             </div>
+
+             <div id=menushowing>
+              <p>Have a look at our delicious menu. <span class=clickable>Click here</span> to hide it again</p>
+               <ul>
+                 <li>Small Pizza: 800</li>
+                 <li>Medium Pizza: 900</li>
+                 <li>Large Pizza: 1000</li>
+                 <li>Crispy Crust: +50</li>
+                 <li>Stuffed Crust: +100</li>
+                 <li>Gluten-free Crust: +150</li>
+                 <li>Mushroom Toppings: +50</li>
+                 <li>Bacon Toppings: +100</li>
+                 <li>Tomato Toppings: +150</li>
+               </ul>
+             </div>
+
+           </div>
+
            <div class="row">
 
              <div class=imageplusmenuplusdeliveryquestion>
              <div class="col-md-5">
                <img src=images/pizza.jpg alt="This is a pizza">
 
-                 <div id=menuhidden>
-                   <p><span class=clickable>Click here</span> to view the prices for our delicious pizzas</p>
-                 </div>
-
-                 <div id=menushowing>
-                  <p>Have a look at our delicious menu. <span class=clickable>Click here</span> to hide it again</p>
-                   <ul>
-                     <li>Small Pizza: 800</li>
-                     <li>Medium Pizza: 900</li>
-                     <li>Large Pizza: 1000</li>
-                     <li>Crispy Crust: +50</li>
-                     <li>Stuffed Crust: +100</li>
-                     <li>Gluten-free Crust: +150</li>
-                     <li>Mushroom Toppings: +50</li>
-                     <li>Bacon Toppings: +100</li>
-                     <li>Tomato Toppings: +150</li>
-                   </ul>
-                 </div>
 
                  <div class= deliveryQuestion>
-                   <p>Would you like your pizza delivered?</p>
+                   <h3>Would you like your pizza delivered?</h3>
 
                    <button class="btn btn-primary" id="yes">YES</button>
                    <button class="btn btn-inverse" id="no">NO</button>
@@ -90,9 +95,9 @@
          <div class=row>
            <div class=col-md-6>
              <h2>Order Details:</h2>
-             <ul id="deliveries">
+             <ol id="deliveries">
 
-             </ul>
+             </ol>
            </div>
 
            <div class="col-md-6">
@@ -100,9 +105,9 @@
                <h2></h2>
                <p>Address: <span class="addressResponse"></span></p>
                <p>Pizzas:</p>
-               <ul id="pizzas">
+               <ol id="pizzas">
 
-               </ul>
+               </ol>
 
              </div>
            </div>
