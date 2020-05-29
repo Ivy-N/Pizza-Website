@@ -1,0 +1,12 @@
+#show-delivery {
+  display: none;
+}
+
+.delivery {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.delivery:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,75 @@
+<!doctype html-5>
+<html>
+  <head>
+    <link href=css/bootstrap.css rel=stylesheet type=text/css>
+    <link href=css/styles.css rel=stylesheet type=text/css>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src=js/scripts.js></script>
+    <title>Pika Pizza</title>
+  </head>
+
+  <body>
+     <div class="container">
+       <h1>Pika Pizza</h1>
+
+       <div class="row">
+
+         <div class="col-md-6">
+           <h2>Pick a pizza:</h2>
+           <form id="new-pikaPizza">
+
+             <div class="form-group">
+               <label for="new-delivery">Delivery? (yes, no)</label>
+               <input type="text" class="form-control" id="new-delivery">
+             </div>
+             <div class="form-group">
+                <label for="new-address">Address (Street, City, State)</label>
+                <input type="text" class="form-control" id="new-address">
+             </div>
+
+             <div id=new-pizzas>
+               <div class=new-pizza>
+
+                 <div class="form-group">
+                   <label for="new-size">Size (small, medium, large)</label>
+                   <input type="text" class="form-control new-size">
+                 </div>
+                 <div class="form-group">
+                   <label for="new-crust">Crust(Crispy, Stuffed, Gluten-free)</label>
+                   <input type="text" class="form-control new-crust">
+                 </div>
+                 <div class="form-group">
+                   <label for="new-toppings">Toppings (mushrooms, bacon, tomatoes)</label>
+                   <input type="text" class="form-control new-toppings">
+                 </div>
+
+               </div>
+             </div>
+
+             <span class="btn btn-primary" id="add-pizza">Another pizza</span>
+             <button type="submit" class="btn">Check out</button>
+           </form>
+
+           <h2>Delivery:</h2>
+           <ul id="deliveries">
+
+           </ul>
+         </div>
+
+         <div class="col-md-6">
+           <div id="show-delivery">
+             <h2></h2>
+             <p>Delivery: <span class="deliveryResponse"></span></p>
+             <p>Address: <span class="addressResponse"></span></p>
+             <p>Pizzas:</p>
+             <ul id="pizzas">
+
+             </ul>
+
+           </div>
+         </div>
+
+       </div>
+     </div>
+   </body>
+  </html>
