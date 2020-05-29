@@ -31,6 +31,15 @@
     }
 
     // user interface logic
+    //for viewing menu
+    jQuery(document).ready(function(){
+  $(".clickable").click(function(){
+    $("#menushowing").slideToggle(4000);
+    $("#menuhidden").slideToggle();
+  });
+});
+
+//for displaying choices selected
     $(document).ready(function() {
 
       $("#add-pizza").click(function() {

@@ -10,3 +10,16 @@
 .delivery:hover {
   text-decoration: underline;
 }
+
+#menushowing{
+  display: none;
+}
+
+.clickable{
+cursor: pointer;
+color: #0088cc;
+}
+
+.clickable:hover{
+  text-decoration: underline;
+}
