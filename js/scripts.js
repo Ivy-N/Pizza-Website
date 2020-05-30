@@ -24,7 +24,7 @@
       return costOfSize+costOfCrust+costOfToppings
     }
 
-  
+
     function resetFields() {
         $("input#new-name").val("");
         $("input#new-address").val("");
@@ -87,16 +87,16 @@ $("button#yes").click(function() {
           newDelivery.pizzas.push(newPizza)
         });
 
-        $("ul#deliveries").append("<li><span class='delivery'>" + newDelivery.deliveryDetails() + "</span></li>");
+        $("ol#deliveries").append("<li><span class='delivery'>" + newDelivery.deliveryDetails() + "</span></li>");
 
         $(".delivery").last().click(function() {
           $("#show-delivery").show();
           $("#show-delivery h2").text(newDelivery.deliveryDetails());
           $(".nameResponse").text(newDelivery.name);
           $(".addressResponse").text(newDelivery.address);
-          $("ul#pizzas").text("");
+          $("ol#pizzas").text("");
           newDelivery.pizzas.forEach(function(pizza) {
-            $("ul#pizzas").append("<li>" + pizza.fullOrder() + "</li>");
+            $("ol#pizzas").append("<li>" + pizza.fullOrder() + "</li>");
           });
         });
 
