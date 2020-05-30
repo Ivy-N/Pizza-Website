@@ -10,6 +10,8 @@ Get the user's pizza preferences: size, crust, toppings
 See the prices.
 See the final order.
 
+Live link: https://ivy-n.github.io/Pizza-Website/
+
 Technologies used:HTML, Javascript, CSS
 
 Contact information: username:Ivy-N
